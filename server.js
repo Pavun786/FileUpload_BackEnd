@@ -7,7 +7,9 @@ const fileRoutes = require("./routes/fileRoute")
 dotenv.config();
 
 app.use(express.json())
-app.use(cors("*"))
+app.use(cors({
+    origin : "https://file-upload-front-end-mauve.vercel.app"
+}))
 
 DbConnection()
 
